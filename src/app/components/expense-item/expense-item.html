@@ -1,0 +1,12 @@
+<div class="card border-primary">
+  <div class="card-body">
+    <div class="row align-items-center justify-content-between p-2">
+      <div class="col">
+        <p class="fs-5">{{ expense().title }} | ${{ expense().amount }} <span class="badge text-bg-primary">{{expense().category}}</span></p>
+      </div>
+      <div class="col col-md-2 justify-content-end">
+      <button class="btn btn-primary" (click)="delete()">Delete</button>
+        </div>
+    </div>
+  </div>
+</div>

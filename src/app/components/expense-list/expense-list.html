@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row text-center p-5">
+        <div class="col fs-1 fw-bold">
+            View Expenses
+        </div>
+    </div>
+    <div class="container-fluid p-5">
+        @for(expense of expenseService.expenses(); track $index) {
+        <div class="container-fluid my-3">
+            <app-expense-item [expense]="expense" />
+        </div>
+        } @empty {
+            <div class="container-fluid my-3">
+                <div class="card border-danger">
+                    <div class="card-body">
+                        No expenses logged
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

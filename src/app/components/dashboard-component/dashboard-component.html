@@ -1,0 +1,48 @@
+<div class="container-fluid px-5">
+    <div class="row text-center p-5">
+        <div class="col fs-1 fw-bold">
+            Dashboard
+        </div>
+    </div>
+    <div class="row gx-5 gy-5">
+        <div class="col col-md-6">
+            <div class="card text-center p-3">
+                <div class="card-title fs-4">
+                    Total Expenses
+                </div>
+                <div class="card-body fs-3">
+                    {{ formatAsMoneyString(expenseService.totalExpense()) }}
+                </div>
+            </div>
+        </div>
+        <div class="col col-md-6">
+            <div class="card text-center p-3">
+                <div class="card-title fs-4">
+                    Number of Expenses
+                </div>
+                <div class="card-body fs-3">
+                    {{ expenseService.transactionCount() }}
+                </div>
+            </div>
+        </div>
+    <div class="col col-md-6">
+        <div class="card text-center p-3">
+            <div class="card-title fs-4">
+                Highest Expense
+            </div>
+            <div class="card-body fs-3">
+                {{ formatAsMoneyString(expenseService.highestExpense()) }}
+            </div>
+        </div>
+    </div>
+    <div class="col col-md-6">
+        <div class="card text-center p-3">
+            <div class="card-title fs-4">
+                Average Expense Amount
+            </div>
+            <div class="card-body fs-3">
+                {{ formatAsMoneyString(expenseService.averageExpense()) }}
+            </div>
+        </div>
+    </div>
+</div>
